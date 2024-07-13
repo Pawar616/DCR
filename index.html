@@ -18,6 +18,12 @@
         function redirectToFilteredData(crimeType) {
             window.location.href = "filtered_data.html?crimeType=" + encodeURIComponent(crimeType);
         }
+        document.addEventListener("DOMContentLoaded", function() {
+        document.getElementById("dcr_btn").addEventListener("click", function() {
+          window.location.href = "./data_form.html";
+        });
+      });
+        
     </script>
 </head>
 <body>
@@ -40,9 +46,12 @@
     </header>
     <main class="container1">
         <div class="image-container">
-            <img src="backg.png" alt="Background Image" class="background-image" />
+            <img src="./main_bg4.jpg" alt="Background Image" class="background-image" />
         </div>
-       
+       <div class="container">
+        <button class="btn btn-primary" id="dcr_btn" type="">DCR</button>
+
+       </div>
         <div class="button-container">
             <button class="btn custom-button" onclick="redirectToFilteredData('दारूबंदी गुन्हे')">दारूबंदी गुन्हे</button>
             <button class="btn custom-button" onclick="redirectToFilteredData('जुगार गुन्हे')">जुगार गुन्हे</button>
